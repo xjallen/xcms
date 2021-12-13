@@ -466,7 +466,7 @@ setMethod("groupval", "xcmsSet", function(object, method = c("medret", "maxint")
         dim(values) <- c(length(groupindex), length(sampnum))
     }
     colnames(values) <- sampnames(object)
-    rownames(values) <- paste(round(groupmat[,"mzmed"],1), round(groupmat[,"rtmed"]), sep = "/")
+    rownames(values) <- paste(round(groupmat[,"mzmed"], 5), round(groupmat[,"rtmed"]), sep = "/")
 
     values
 })
